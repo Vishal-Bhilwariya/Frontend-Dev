@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My First Web Page</title>
+</head>
+<body>
+  <p><strong>STRONG</strong> <em>EM</em> <mark>MARK</mark> <small>SMALL</small> <br></p>
+</body>
+</html>
