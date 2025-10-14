@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My First Web Page</title>
+</head>
+<body>
+    <header>
+        <h1>HEADER</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <p>
+           MAIN CONTENT
+        </p>
+        
+        <section>
+            <h2>About Me</h2>
+            <p>
+                SECTION
+            </p>
+        </section>
+
+        <article>
+            <h2>My First Blog</h2>
+            <p>
+               ARTUCLE
+            </p>
+        </article>
+
+        <aside>
+            <h2>Useful Links</h2>
+            <ul>
+                <li><a href="https://www.freecodecamp.org" target="_blank">FreeCodeCamp</a></li>
+                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+            </ul>
+        </aside>
+        
+    </main>
+
+    <footer>
+        <p>© 2025 VISHAL. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
