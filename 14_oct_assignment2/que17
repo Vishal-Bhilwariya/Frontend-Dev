@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My First Web Page</title>
+</head>
+<body>
+    <main>
+        THIS IS MAIN CONTENT
+         <section>
+            <h2>About Me</h2>
+            <p>
+               VISHAL BHILWARIYA, STUDENT
+            </p>
+        </section>
+        <article>
+            <h2>Article</h2>
+            <p>
+               paragrajamf jn
+            </p>
+        </article>
+    </main>
+
+</body>
+</html>
