@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event-Based Counter Simulation</title>
+</head>
+<body>
+  <h2>Event-Based Counter Simulation</h2>
+  <p id="output"></p>
+  <script>
+    let count = 0;
+
+    function increment() {
+      function update() {
+        count++;
+        console.log("Count after increment:", count);
+        document.getElementById("output").innerHTML += `Count after increment: ${count}<br>`;
+      }
+      update();
+    }
+
+    function decrement() {
+      function update() {
+        count--;
+        console.log("Count after decrement:", count);
+        document.getElementById("output").innerHTML += `Count after decrement: ${count}<br>`;
+      }
+      update();
+    }
+
+    increment();
+    increment();
+    decrement();
+    increment();
+  </script>
+</body>
+</html>
