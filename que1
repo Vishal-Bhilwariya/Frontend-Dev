@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Q1 – Dynamic Data Parser</title>
+<style>
+  body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+  pre { background: #222; color: #0f0; padding: 15px; border-radius: 8px; }
+  h1 { color: #333; }
+</style>
+</head>
+<body>
+
+<h1>Q1 – Dynamic Data Parser</h1>
+<pre id="output"></pre>
+
+<script>
+"use strict";
+
 const apiData = ["25", "true", "false", "NaN", " ", "100px", "3.14", null, undefined];
 
 const validNumbers = [];
@@ -12,7 +31,9 @@ function convertValue(value) {
   };
 }
 
-console.log("==== PARSE REPORT ====\n");
+let log = "";
+
+log += "==== PARSE REPORT ====\n\n";
 
 for (let i = 0; i < apiData.length; i++) {
   const v = apiData[i];
@@ -22,15 +43,22 @@ for (let i = 0; i < apiData.length; i++) {
   if (isValid) validNumbers.push(number);
   else invalidNumbers.push(v);
 
-  console.log(`Item ${i + 1}:`);
-  console.log(`  Original:`, v);
-  console.log(`  Number:`, number);
-  console.log(`  Boolean:`, boolean);
-  console.log(`  String: "${string}"`);
-  console.log(`  Number Valid?`, isValid ? "✔ Yes" : "✘ No");
-  console.log("-------------------------");
+  log += `Item ${i + 1}:\n`;
+  log += `  Original: ${v}\n`;
+  log += `  Number: ${number}\n`;
+  log += `  Boolean: ${boolean}\n`;
+  log += `  String: "${string}"\n`;
+  log += `  Number Valid? ${isValid ? "✔ Yes" : "✘ No"}\n`;
+  log += "-------------------------\n";
 }
 
-console.log("\n==== SUMMARY ====");
-console.log("Valid Numeric Values:", validNumbers);
-console.log("Invalid Numeric Values:", invalidNumbers);
+log += `\n==== SUMMARY ====\n`;
+log += `Valid: ${JSON.stringify(validNumbers)}\n`;
+log += `Invalid: ${JSON.stringify(invalidNumbers)}\n`;
+
+document.getElementById("output").textContent = log;
+</script>
+
+</body>
+</html>
+
