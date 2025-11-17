@@ -1,0 +1,36 @@
+const apiData = ["25", "true", "false", "NaN", " ", "100px", "3.14", null, undefined];
+
+const validNumbers = [];
+const invalidNumbers = [];
+
+function convertValue(value) {
+  return {
+    original: value,
+    number: Number(value),
+    boolean: Boolean(value),
+    string: String(value)
+  };
+}
+
+console.log("==== PARSE REPORT ====\n");
+
+for (let i = 0; i < apiData.length; i++) {
+  const v = apiData[i];
+  const { number, boolean, string } = convertValue(v);
+  const isValid = typeof number === "number" && !isNaN(number) && String(v).trim() !== "";
+
+  if (isValid) validNumbers.push(number);
+  else invalidNumbers.push(v);
+
+  console.log(`Item ${i + 1}:`);
+  console.log(`  Original:`, v);
+  console.log(`  Number:`, number);
+  console.log(`  Boolean:`, boolean);
+  console.log(`  String: "${string}"`);
+  console.log(`  Number Valid?`, isValid ? "✔ Yes" : "✘ No");
+  console.log("-------------------------");
+}
+
+console.log("\n==== SUMMARY ====");
+console.log("Valid Numeric Values:", validNumbers);
+console.log("Invalid Numeric Values:", invalidNumbers);
